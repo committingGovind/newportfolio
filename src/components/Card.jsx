@@ -21,7 +21,7 @@ export function Card({ props }) {
   const courses = props.courses;
 
   return (
-    <div className="min-h-lvh flex items-center justify-center sticky top-0">
+    <div className="min-h-lvh min-w-lvw flex items-center justify-center sticky top-0">
       <div
         ref={ref}
         style={{ background: props.color }}
@@ -32,7 +32,7 @@ export function Card({ props }) {
             <a
               href={props.link}
               target="_blank"
-              className="flex transition transform hover:scale-105"
+              className="flex transition transform"
             >
               <div className="flex items-center justify-center">
                 <h1 className="text-slate-50 mr-2 text-xl underline">
