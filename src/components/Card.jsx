@@ -21,7 +21,7 @@ export function Card({ props }) {
   const courses = props.courses;
 
   return (
-    <div className="min-h-lvh min-w-lvw flex items-center justify-center sticky top-0">
+    <div className="min-h-lvh  flex items-center justify-center sticky top-0">
       <div
         ref={ref}
         style={{ background: props.color }}
@@ -79,7 +79,7 @@ export function Card({ props }) {
             <div className="mr-1">
               <img
                 src={props.wallpaper}
-                className="h-[160px] w-[210px] rounded-3xl"
+                className="h-[160px] w-[160px] rounded-3xl"
               ></img>
             </div>
           </div>

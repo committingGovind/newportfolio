@@ -6,7 +6,7 @@ export function About() {
   return (
     <motion.div
       initial={{
-        opacity: 0,
+        opacity: 1,
       }}
       whileInView={{
         opacity: 1,
@@ -16,7 +16,7 @@ export function About() {
       }}
       transition={{
         duration: 0.8,
-        delay: 0.3,
+        delay: 0.1,
         ease: [0, 0.71, 0.2, 1.01],
       }}
       onViewportEnter={() => console.log("Enter!")}
