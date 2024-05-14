@@ -21,11 +21,11 @@ export function Card({ props }) {
   const courses = props.courses;
 
   return (
-    <div className="h-[80lvh] flex items-center justify-center sticky top-0">
+    <div className="h-[105lvh] flex items-center justify-center sticky top-0">
       <div
         ref={ref}
         style={{ background: props.color }}
-        className="h-[40%] w-[100%] rounded-3xl p-4 -translate-y-5 shadow-2xl shadow-black backdrop-brightness-50 filter"
+        className="h-[30%] w-[100%] rounded-3xl p-4 -translate-y-5 shadow-2xl shadow-black backdrop-brightness-50 filter"
       >
         <div>
           <div className="flex items-center justify-center mt-3">
@@ -55,7 +55,7 @@ export function Card({ props }) {
               </div>
             </a>
           </div>
-          <div className="flex justify-between mt-12">
+          <div className="flex justify-between mt-10">
             <div className="ml-2 text-slate-50">
               <div>
                 <span className="text-lg">{props.degree}</span>
