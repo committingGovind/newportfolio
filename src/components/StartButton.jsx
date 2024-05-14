@@ -31,7 +31,7 @@ export function StartButton({}) {
       }}
       className="relative px-5 py-5 rounded-3xl radial-gradient w-[200px] h-[100px]"
     >
-      <span className="text-gray-200 text-3xl lg:text-8xl tracking-wide font-thin relative linear-mask">
+      <span className="text-gray-200 text-3xl tracking-wide font-thin relative linear-mask">
         Start here!
       </span>
 

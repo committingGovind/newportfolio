@@ -1,17 +1,11 @@
-import React from "react";
-import { useRef, useState, useEffect } from "react";
-import { useScroll } from "framer-motion";
+import React, { useEffect, useRef } from "react";
 
-import { motion, useAnimation, useInView } from "framer-motion";
+import { useInView } from "framer-motion";
 import { Pill } from "./Pill";
 
 export function Card({ props }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: false });
-
-  const [originalColor, setOriginalColor] = useState(
-    document.body.style.backgroundColor
-  );
 
   useEffect(() => {
     if (inView) {
@@ -31,7 +25,7 @@ export function Card({ props }) {
       <div
         ref={ref}
         style={{ background: props.color }}
-        className="h-[300px] w-[600px] rounded-3xl p-4 -translate-y-5 shadow-2xl shadow-black backdrop-brightness-50 filter"
+        className="h-[40%] w-[100%] rounded-3xl p-4 -translate-y-5 shadow-2xl shadow-black backdrop-brightness-50 filter"
       >
         <div>
           <div className="flex items-center justify-center mt-3">
@@ -62,7 +56,7 @@ export function Card({ props }) {
             </a>
           </div>
           <div className="flex justify-between mt-12">
-            <div className="ml-4 text-slate-50">
+            <div className="ml-2 text-slate-50">
               <div>
                 <span className="text-lg">{props.degree}</span>
                 <br></br>
@@ -82,7 +76,7 @@ export function Card({ props }) {
                 </ol>
               </div>
             </div>
-            <div className="mr-2">
+            <div className="mr-1">
               <img
                 src={props.wallpaper}
                 className="h-[160px] w-[210px] rounded-3xl"
