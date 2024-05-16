@@ -1,48 +1,32 @@
 import { motion } from "framer-motion";
 import { useRecoilValue } from "recoil";
-import { skills } from "../store/atoms/skills";
-import { Variant } from "../components/Variant";
 import { TextReveal } from "../components/TextReveal";
+import { skills } from "../store/atoms/skills";
 
 export function Skills() {
   const skill = useRecoilValue(skills);
 
   return (
-    <motion.div
-      initial={{
-        opacity: 1,
-      }}
-      whileInView={{
-        opacity: 1,
-      }}
-      viewport={{
-        margin: "-200px",
-      }}
-      transition={{
-        duration: 0.8,
-        delay: 0.1,
-        ease: [0, 0.71, 0.2, 1.01],
-      }}
-      onViewportEnter={() => console.log("Enter!")}
-      onViewportLeave={() => console.log("exit!")}
-      className="mt-20"
-    >
-      <div>
-        <TextReveal
-          children={
-            <div>
-              <div className="flex items-end">
-                <span className="text-6xl ml-6 text-left font-light text-green-200">
-                  SKILLS{"  "}
+    <div className="mt-20">
+      <div className="flex items-center justify-center">
+        <div>
+          <TextReveal
+            children={
+              <span className="sm:text-6xl text-5xl flex ml-6 font-mono text-left font-light text-white">
+                <span className="underline underline-offset-4 sm:no-underline">
+                  SKILLS
                 </span>
-
-                <div className="w-[10px] h-[10px] bg-green-500 mb-2"></div>
-              </div>
-              <hr className="bg-green-500" />
-            </div>
-          }
-        />
+                <span className="text-green-500 hidden sm:block">.</span>
+                <span className="text-green-500 block sm:hidden">:</span>
+              </span>
+            }
+          />
+        </div>
+        <div className="border-t border-blue-400 hidden sm:block flex-grow ml-4">
+          {" "}
+        </div>
       </div>
+
       <div className="mt-20">
         <ol>
           <li className="">
@@ -96,6 +80,6 @@ export function Skills() {
           </li>
         </ol>
       </div>
-    </motion.div>
+    </div>
   );
 }
