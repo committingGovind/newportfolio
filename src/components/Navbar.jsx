@@ -1,6 +1,6 @@
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { Fragment, useEffect, useState } from "react";
+import { Fragment } from "react";
 
 const navigation = [
   { name: "Top", href: "intro", current: true },
@@ -14,23 +14,11 @@ function classNames(...classes) {
 }
 
 export default function Navbar() {
-  const [scrollOpacity, setScrollOpacity] = useState(20);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const newOpacity = window.scrollY > 20 ? 100 : 20;
-      setScrollOpacity(newOpacity);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <div className="flex items-center justify-center mt-10">
       <Disclosure
         as="nav"
-        className="bg-[#191919] rounded-xl mt-5 fixed w-[100%] md:w-[80%] z-50 bg-opacity-${scrollOpacity} shadow-xl"
+        className="bg-[#191919] bg-opacity-80 backdrop-blur-md rounded-xl mt-5 fixed w-[100%] md:w-[80%] z-50 shadow-xl"
       >
         {({ open }) => (
           <>

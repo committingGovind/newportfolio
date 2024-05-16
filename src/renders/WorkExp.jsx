@@ -1,7 +1,27 @@
+import { useRecoilValue } from "recoil";
+import { Exprender } from "../components/Exprender";
 import { TextReveal } from "../components/TextReveal";
-import { motion } from "framer-motion";
+import { workstack } from "../store/atoms/workstack";
+import { useTypedSuperPower } from "../store/hooks/useTypedSuperPower";
+import { useQuoteTypedSuperPower } from "../store/hooks/useQuoteTypedSuperPower";
 
 export function WorkExp() {
+  const expCards = useRecoilValue(workstack);
+
+  const typingQuotes = [
+    "The only source of knowledge is experience.",
+    "Experience is the teacher of all things.",
+    "Experience is the mother of wisdom.",
+  ];
+
+  const typingPerson = ["Albert Einstein", "Julius Caesar", "Proverb"];
+
+  // const superpower = useTypedSuperPower(typingWords);
+
+  const quotesSuperpower = useQuoteTypedSuperPower(typingQuotes, 50, 500, 50);
+
+  const peopleSuperpower = useQuoteTypedSuperPower(typingPerson, 60, 500, 50);
+
   return (
     <div className="mt-24">
       <div id="experience">
@@ -24,20 +44,28 @@ export function WorkExp() {
           </div>
         </div>
 
-        <p className="text-2xl mt-6 p-4 ml-3 text-slate-50 italic text-left font-thin">
-          "The more that you read, the more things you will know. The more that
-          you learn, the more places you'll go."
+        <p className="text-2xl lg:text-6xl lg:text-opacity-60 lg:mt-16 mt-6 p-4 ml-3 text-slate-50 italic text-left font-thin">
+          "{quotesSuperpower}"
         </p>
-        <span className="text-2xl text-slate-50 italic text-left font-thin ml-20">
-          - Dr. Seuss
+        <span className="text-2xl lg:text-5xl lg:text-opacity-40 text-slate-50 lg:ml-[65%] lg:mt-20 italic text-left font-thin ml-20">
+          - {peopleSuperpower}{" "}
         </span>
       </div>
-      <div className="flex justify-center items-center">
-        {/* <div className="">
-          {educationCards.map((card, index) => {
-            return <Card key={index} i={index} props={card} />;
+      <div className="flex justify-center mt-24">
+        <div className="grid justify-center ">
+          {expCards.map((card, index) => {
+            return (
+              <div>
+                <div>
+                  <Exprender key={index} props={card} />
+                </div>
+                <div className="md:mt-10 md:mb-10">
+                  <div className="border-t border-green-500 flex-grow ml-4 mt-4 mb-4"></div>
+                </div>
+              </div>
+            );
           })}
-        </div> */}
+        </div>
       </div>
     </div>
   );

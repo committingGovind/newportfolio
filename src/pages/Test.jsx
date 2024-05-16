@@ -60,11 +60,12 @@ export function Test() {
                   <Education id="education" />
                 </div>
                 <div className="row-auto h-auto">
-                  <Skills />
-                </div>
-                <div className="row-auto h-auto">
                   <WorkExp />
                 </div>
+                <div className="row-auto h-auto md:mt-40">
+                  <Skills />
+                </div>
+
                 {/* <div>
                   <Skills />
                 </div> */}
