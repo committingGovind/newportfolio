@@ -14,7 +14,7 @@ export function Test() {
     "Swimmer",
     "Badminton LOVER!",
     "Otaku",
-    "Binge Watching",
+    "Binge Watcher",
   ];
 
   const superpower = useTypedSuperPower(typingWords);
