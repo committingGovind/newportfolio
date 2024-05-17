@@ -15,7 +15,7 @@ const navigation = [
   { name: "Projects", href: "#projects" },
   {
     name: "Resume",
-    href: "https://drive.google.com/file/d/1Gi1nfV_38_twcvfphXVpNlvgqEHIKHgy/view?usp=sharing",
+    href: "https://drive.google.com/file/d/1nlHF6P9PoRFlXHHhNbaFOkSylRDvzVN3/view?usp=sharing",
     target: "_blank",
   },
 ];
