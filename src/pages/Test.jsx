@@ -105,7 +105,7 @@ export function Test() {
                   <WorkExp />
                 </div>
                 <div
-                  id="skills"
+                  id="workexp"
                   className="row-auto h-auto md:mt-40"
                   ref={ref4}
                 >

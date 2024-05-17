@@ -10,8 +10,8 @@ import { useEffect } from "react";
 
 const navigation = [
   { name: "Top", href: "#intro" },
-  { name: "Education & Skills", href: "#education" },
-  { name: "Experience", href: "#workexp" },
+  { name: "Education", href: "#education" },
+  { name: "Experience & Skills", href: "#workexp" },
   { name: "Projects", href: "#projects" },
   {
     name: "Resume",
