@@ -6,7 +6,7 @@ export function Exprender({ props }) {
 
   return (
     <div className="flex justify-center">
-      <div className="grid h-auto w-[50lvh] md:w-[70lvw] md:shadow-2xl md:shadow-black md:rounded-3xl p-10 md:bg-[#191919]">
+      <div className="grid h-auto w-[50lvh] md:w-[70lvw] md:shadow-2xl md:shadow-black md:rounded-md p-10 md:bg-[#191919]">
         <div className="flex justify-between">
           <div className="bg-green-500 text-[#222] pl-1 pr-1 rounded-md md:text-3xl md:bg-inherit md:text-slate-200 md:font-mono md:font-thin">
             {props.name}
@@ -31,15 +31,15 @@ export function Exprender({ props }) {
               return (
                 <div className="flex justify-center mt-2 mb-2">
                   <div className="text-left text-white">
-                    <p className="text-thin md:text-xl md:text-thin md:text-slate-200 md:font-mono">
-                      <span className="md:text-2xl md:text-thin md:text-slate-50">
+                    <p className="font-thin md:text-xl md:font-thin md:text-slate-200">
+                      <span className="md:text-xl md:font-thin md:text-slate-50">
                         {index + 1 + ".)"}{" "}
                       </span>
-                      <span className="underline md:no-underline font-medium md:text-2xl md:text-thin md:text-blue-400">
+                      <span className="underline md:no-underline md:mb-4 font-medium md:text-xl md:font-mono md:text-thin md:text-blue-400">
                         {splitWork[0]}
                       </span>
                       {": "}
-                      <br className="hidden md:block"></br>
+                      <br className="hidden md:block mt-4"></br>
                       {splitWork[1]}
                     </p>
                   </div>
@@ -49,19 +49,9 @@ export function Exprender({ props }) {
           </div>
         </div>
         <div className="h-auto w-[40lvh] md:w-[60lvw] md:mt-5">
-          <ul className="flex flex-wrap">
+          <ul className="flex flex-wrap gap-2">
             {techstack.map((tech, index) => {
-              const txt = "#000000";
-              const back = "#fafafa";
-
-              return (
-                <Pill
-                  key={index}
-                  skill={tech}
-                  textColor={txt}
-                  backColor={back}
-                />
-              );
+              return <Pill key={index} skill={tech} />;
             })}
           </ul>
         </div>

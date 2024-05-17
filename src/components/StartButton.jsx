@@ -29,10 +29,10 @@ export function StartButton({}) {
           mass: 0.1,
         },
       }}
-      className="relative px-5 py-5 rounded-3xl radial-gradient w-[200px] h-[100px]"
+      className="relative px-5 py-5 rounded-3xl radial-gradient w-[200px] h-[80px]"
     >
-      <span className="text-gray-200 text-3xl tracking-wide font-thin relative linear-mask">
-        Start here!
+      <span className="text-gray-200 text-2xl tracking-wide font-thin relative linear-mask">
+        Send Here
       </span>
 
       <span className="block absolute inset-0 rounded-3xl p-px linear-overlay" />

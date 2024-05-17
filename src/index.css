@@ -66,9 +66,8 @@ body {
 
   margin: 0;
   padding: 0;
-  /* padding-bottom: 100px; */
+  padding-bottom: 20px;
   background-color: var(--background);
-  color: var(--accent);
   --scroll-bar: white;
 }
 
@@ -90,9 +89,9 @@ article {
 }
 
 .box {
-  width: 200px;
-  height: 200px;
-  background: var(--accent);
+  width: 100px;
+  height: 80px;
+  background: var(--background);
   border-radius: 20%;
 }
 

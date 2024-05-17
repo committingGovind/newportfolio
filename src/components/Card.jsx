@@ -30,7 +30,7 @@ export function Card({ props, i }) {
       <div
         ref={ref}
         style={{ background: props.color }}
-        className="lg:h-[50lvh] lg:w-[50lvw] h-[30%] w-[100%] rounded-3xl p-4 -translate-y-5 lg:shadow-xl shadow-2xl shadow-black backdrop-brightness-50 filter"
+        className="lg:h-[50lvh] lg:w-[50lvw] h-[30%] w-[100%] rounded-md p-4 -translate-y-5 lg:shadow-xl shadow-2xl shadow-black backdrop-brightness-50 filter"
       >
         <div>
           <div className="flex items-center justify-center mt-3 lg:mt-10 lg:transition lg:transform lg:hover:scale-105 lg:hover:text-green-500">

@@ -2,7 +2,6 @@ import { useRecoilValue } from "recoil";
 import { Exprender } from "../components/Exprender";
 import { TextReveal } from "../components/TextReveal";
 import { workstack } from "../store/atoms/workstack";
-import { useTypedSuperPower } from "../store/hooks/useTypedSuperPower";
 import { useQuoteTypedSuperPower } from "../store/hooks/useQuoteTypedSuperPower";
 
 export function WorkExp() {
@@ -15,8 +14,6 @@ export function WorkExp() {
   ];
 
   const typingPerson = ["Albert Einstein", "Julius Caesar", "Proverb"];
-
-  // const superpower = useTypedSuperPower(typingWords);
 
   const quotesSuperpower = useQuoteTypedSuperPower(typingQuotes, 50, 500, 50);
 

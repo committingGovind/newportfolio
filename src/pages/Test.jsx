@@ -1,8 +1,12 @@
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { Education } from "../components/Education";
+import { Forms } from "../renders/Forms";
 import { Skills } from "../renders/Skills";
 import { WorkExp } from "../renders/WorkExp";
 import { useTypedSuperPower } from "../store/hooks/useTypedSuperPower";
+import { useSetRecoilState } from "recoil";
+import { navbaratom } from "../store/atoms/navbar";
+import { useEffect, useRef } from "react";
 
 export function Test() {
   const { scrollYProgress } = useScroll();
@@ -19,6 +23,44 @@ export function Test() {
 
   const superpower = useTypedSuperPower(typingWords);
 
+  const setNavbarHover = useSetRecoilState(navbaratom);
+
+  const ref1 = useRef(null);
+  const inView1 = useInView(ref1, { once: false });
+
+  const ref2 = useRef(null);
+  const inView2 = useInView(ref2, { once: false });
+
+  const ref3 = useRef(null);
+  const inView3 = useInView(ref3, { once: false });
+
+  const ref4 = useRef(null);
+  const inView4 = useInView(ref4, { once: false });
+
+  useEffect(() => {
+    if (inView1) {
+      setNavbarHover({
+        ref: ref1,
+        id: "intro",
+      });
+    } else if (inView2) {
+      setNavbarHover({
+        ref: ref2,
+        id: "education",
+      });
+    } else if (inView3) {
+      setNavbarHover({
+        ref: ref3,
+        id: "workexp",
+      });
+    } else {
+      setNavbarHover({
+        ref: ref4,
+        id: "skills",
+      });
+    }
+  }, [inView1, inView2, inView3, inView4]);
+
   return (
     <div className="flex justify-center">
       <motion.div
@@ -28,7 +70,7 @@ export function Test() {
 
       <div className="flex justify-center">
         <div>
-          <section id="intro">
+          <section id="intro" ref={ref1}>
             <div className="h-lvh w-full flex justify-center items-center">
               <div className="grid grid-rows-2 gap-4">
                 <div className="row-span-1">
@@ -56,22 +98,22 @@ export function Test() {
           <section>
             <div className="flex justify-center">
               <div className="grid">
-                <div className="row-auto h-auto">
-                  <Education id="education" />
+                <div id="education" className="row-auto h-auto" ref={ref2}>
+                  <Education />
                 </div>
-                <div className="row-auto h-auto">
+                <div id="workexp" className="row-auto h-auto" ref={ref3}>
                   <WorkExp />
                 </div>
-                <div className="row-auto h-auto md:mt-40">
+                <div
+                  id="skills"
+                  className="row-auto h-auto md:mt-40"
+                  ref={ref4}
+                >
                   <Skills />
                 </div>
-
-                {/* <div>
-                  <Skills />
-                </div> */}
-                {/* <div>
-                  <p>Hi there!</p>
-                </div> */}
+                <div className="mt-32">
+                  <Forms />
+                </div>
               </div>
             </div>
           </section>

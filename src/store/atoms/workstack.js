@@ -4,7 +4,7 @@ export const workstack = atom({
   key: "workstack",
   default: [
     {
-      name: "Société Generale",
+      name: "Societe Generale",
       duration: "July '22 - Oct '23",
       title: "Software Engineer [Full time]",
       location: "Bengaluru",
@@ -32,7 +32,7 @@ export const workstack = atom({
       title: "Software Engineer [Contractual]",
       location: "Remote - US Based",
       works: [
-        "Frontend: Developed multiple web pages for an existing website thereby existing its functionality and usability.",
+        "Frontend: Developed multiple web pages for an existing website thereby extending its existing functionality and usability. Did migration from react hooks to recoil atoms for most use cases.",
         "Backend: Implemented CRUD operations for the extended website allowing users to sign-up for newsletters and owner pushed posts.",
       ],
       techstack: [
