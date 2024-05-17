@@ -13,6 +13,11 @@ const navigation = [
   { name: "Education & Skills", href: "#education" },
   { name: "Experience", href: "#workexp" },
   { name: "Projects", href: "#projects" },
+  {
+    name: "Resume",
+    href: "https://drive.google.com/file/d/1Gi1nfV_38_twcvfphXVpNlvgqEHIKHgy/view?usp=sharing",
+    target: "_blank",
+  },
 ];
 
 function classNames(...classes) {
@@ -80,6 +85,7 @@ export default function Navbar() {
                           <a
                             key={item.name}
                             href={item.href}
+                            target={item.target ? item.target : "_parent"}
                             onClick={() => handleNavClick(item.href)}
                             className={classNames(
                               currentNav === item.href
