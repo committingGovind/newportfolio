@@ -73,12 +73,12 @@ export function Cards() {
   ];
 
   return (
-    <motion.div className="bg-[##222] flex items-center justify-center">
-      <div className="grid grid-cols-2 h-[50lvh] w-[60lvw] gap-8 m-16">
+    <motion.div className="bg-[##222] flex items-center sm:justify-center justify-start ml-16 sm:ml-0" >
+      <div className="grid sm:grid-cols-2 h-auto w-[60lvw] gap-8 sm:m-16 mt-10">
         {items.map((item) => (
           <motion.div
             layout
-            className={`card bg-[#191919] rounded-lg shadow-2xl p-4 cursor-pointer transform transition-transform duration-500 hover:scale-105 ${
+            className={`card bg-[#191919] rounded-lg shadow-2xl p-4 w-[80lvw] sm:w-full cursor-pointer transform transition-transform duration-500 hover:scale-105 ${
               selectedId === item.id ? "card-selected" : ""
             }`}
             layoutId={`card-container-${item.id}`}

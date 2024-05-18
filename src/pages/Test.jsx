@@ -80,10 +80,10 @@ export function Test() {
       <div className="flex justify-center">
         <div>
           <section id="intro" ref={ref1}>
-            <div className="h-lvh w-full flex justify-center items-center">
-              <div className="grid grid-rows-2 gap-4">
+            <div className="h-lvh flex justify-center items-center">
+              <div className="grid grid-rows-2 gap-4 w-[100lvw] sm:w-auto">
                 <div className="row-span-1">
-                  <span className="lg:text-9xl xs:text-5xl text-3xl  font-mono text-left font-light text-white">
+                  <span className="lg:text-9xl xs:text-5xl text-3xl  font-mono font-light text-white">
                     Hi, I'm GOVIND
                     <span className="text-green-500">.</span>
                   </span>
@@ -120,11 +120,7 @@ export function Test() {
                 >
                   <Skills />
                 </div>
-                <div
-                  className="row-auto h-auto hidden sm:block"
-                  id="projects"
-                  ref={ref5}
-                >
+                <div className="row-auto h-auto " id="projects" ref={ref5}>
                   <Projects />
                 </div>
                 <div className="mt-32">

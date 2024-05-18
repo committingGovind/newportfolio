@@ -26,7 +26,7 @@ export function Education() {
       }}
       onViewportEnter={() => console.log("Enter!")}
       onViewportLeave={() => console.log("exit!")}
-      className="mt-20"
+      className="mt-20 grid"
     >
       <div>
         <div>
@@ -49,11 +49,11 @@ export function Education() {
             </div>
           </div>
 
-          <p className="text-2xl mt-6 p-4 ml-3 text-slate-50 italic text-left font-thin">
+          <p className="sm:text-3xl text-xl mt-6 p-4 ml-12 text-slate-50 italic text-left font-thin h-auto w-[100lvw] sm:w-[60lvw]">
             "The more that you read, the more things you will know. The more
             that you learn, the more places you'll go."
           </p>
-          <span className="text-2xl text-slate-50 italic text-left font-thin ml-20">
+          <span className="sm:text-3xl text-2xl text-slate-200 italic text-left font-thin ml-32">
             - Dr. Seuss
           </span>
         </div>

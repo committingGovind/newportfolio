@@ -34,13 +34,10 @@ export default function Navbar() {
   };
 
   const hoverTab = useRecoilValue(navbaratom);
-  // const inView = useInView(hoverTab.ref, { once: false });
 
   useEffect(() => {
     setCurrentNav("#" + hoverTab.id);
   }, [hoverTab]);
-
-  //in view code:
 
   return (
     <div>
