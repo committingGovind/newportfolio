@@ -31,7 +31,6 @@ export function About() {
                   <span className="text-6xl ml-4 text-left font-light font-mono text-slate-200">
                     &lt; ABOUT &gt;
                   </span>
-                  {/* <div className="w-[10px] h-[10px] bg-green-500 mb-2"></div> */}
                 </div>
                 <hr className="bg-green-500 text-right" />
               </div>

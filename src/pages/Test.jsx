@@ -1,12 +1,13 @@
-import { motion, useScroll, useTransform, useInView } from "framer-motion";
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import { useEffect, useRef } from "react";
+import { useSetRecoilState } from "recoil";
 import { Education } from "../components/Education";
 import { Forms } from "../renders/Forms";
+import { Projects } from "../renders/Projects";
 import { Skills } from "../renders/Skills";
 import { WorkExp } from "../renders/WorkExp";
-import { useTypedSuperPower } from "../store/hooks/useTypedSuperPower";
-import { useSetRecoilState } from "recoil";
 import { navbaratom } from "../store/atoms/navbar";
-import { useEffect, useRef } from "react";
+import { useTypedSuperPower } from "../store/hooks/useTypedSuperPower";
 
 export function Test() {
   const { scrollYProgress } = useScroll();
@@ -37,6 +38,9 @@ export function Test() {
   const ref4 = useRef(null);
   const inView4 = useInView(ref4, { once: false });
 
+  const ref5 = useRef(null);
+  const inView5 = useInView(ref5, { once: false });
+
   useEffect(() => {
     if (inView1) {
       setNavbarHover({
@@ -53,13 +57,18 @@ export function Test() {
         ref: ref3,
         id: "workexp",
       });
+    } else if (inView5) {
+      setNavbarHover({
+        ref: ref5,
+        id: "projects",
+      });
     } else {
       setNavbarHover({
         ref: ref4,
         id: "skills",
       });
     }
-  }, [inView1, inView2, inView3, inView4]);
+  }, [inView1, inView2, inView3, inView4, inView5]);
 
   return (
     <div className="flex justify-center">
@@ -110,6 +119,13 @@ export function Test() {
                   ref={ref4}
                 >
                   <Skills />
+                </div>
+                <div
+                  className="row-auto h-auto hidden sm:block"
+                  id="projects"
+                  ref={ref5}
+                >
+                  <Projects />
                 </div>
                 <div className="mt-32">
                   <Forms />
