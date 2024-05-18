@@ -7,7 +7,7 @@ export function Skills() {
   const skill = useRecoilValue(skills);
 
   return (
-    <div className="mt-20 w-[100lvw] sm:w-[60lvw] p-2">
+    <div className="mt-20">
       <div className="flex items-center justify-center">
         <div>
           <TextReveal

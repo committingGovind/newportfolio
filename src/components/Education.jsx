@@ -49,7 +49,7 @@ export function Education() {
             </div>
           </div>
 
-          <p className="sm:text-3xl text-xl mt-6 p-4 ml-12 text-slate-50 italic text-left font-thin h-auto w-[100lvw] sm:w-[60lvw]">
+          <p className="sm:text-3xl text-xl mt-6 p-4 ml-12 text-slate-50 italic text-left font-thin h-auto w-[90lvw] sm:w-[60lvw]">
             "The more that you read, the more things you will know. The more
             that you learn, the more places you'll go."
           </p>

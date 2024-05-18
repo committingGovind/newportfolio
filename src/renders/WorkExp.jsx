@@ -21,7 +21,7 @@ export function WorkExp() {
 
   return (
     <div className="mt-24">
-      <div className="grid justify-center">
+      <div className="grid sm:justify-center justify-start">
         <div id="experience">
           <div className="flex items-center justify-center">
             <div>
@@ -42,7 +42,7 @@ export function WorkExp() {
             </div>
           </div>
 
-          <p className="text-2xl lg:text-6xl lg:text-opacity-60 lg:mt-16 mt-6 p-4 ml-3 text-slate-50 italic text-left font-thin">
+          <p className="text-2xl lg:text-6xl lg:text-opacity-60 lg:mt-16 mt-6 p-4 ml-10 text-slate-50 italic text-left font-thin">
             "{quotesSuperpower}"
           </p>
           <span className="text-2xl lg:text-5xl lg:text-opacity-40 text-slate-50 lg:ml-[65%] lg:mt-20 italic text-left font-thin ml-20">
