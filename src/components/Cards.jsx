@@ -73,7 +73,7 @@ export function Cards() {
   ];
 
   return (
-    <motion.div className="bg-[##222] flex items-center sm:justify-center justify-start ml-16 sm:ml-0" >
+    <motion.div className="bg-[##222] z-10 flex items-center sm:justify-center justify-start ml-16 sm:ml-0">
       <div className="grid sm:grid-cols-2 h-auto w-[60lvw] gap-8 sm:m-16 mt-10">
         {items.map((item) => (
           <motion.div
@@ -112,7 +112,7 @@ export function Cards() {
 
       {selectedId && isOpen && (
         <motion.div
-          className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center"
+          className="fixed inset-0 bg-black bg-opacity-60 z-10 flex items-center justify-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.4 }}

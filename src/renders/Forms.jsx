@@ -2,11 +2,11 @@ import { ImageHover } from "../components/ImageHover";
 
 export function Forms() {
   return (
-    <div className="relative min-w-lvw flex justify-center items-center rounded-sm">
-      <div className="sm:h-[60%] h-[30%] w-[90lvw] sm:w-[50%] overflow-hidden text-white  rounded-3xl pt-4 pl-5 pr-5 sm:pt-16 sm:pl-16 sm:pr-16 sm:pb-7 m-0 shadow-2xl shadow-black">
+    <div className="relative min-w-lvw flex justify-center items-center rounded-sm z-0">
+      <div className="sm:h-[60%] h-[30%] z-0 w-[90lvw] sm:w-[50%] overflow-hidden text-white  rounded-3xl pt-4 pl-5 pr-5 sm:pt-16 sm:pl-16 sm:pr-16 sm:pb-7 m-0 shadow-2xl shadow-black">
         <div className="grid items-center">
           <div className="flex items-center justify-center mt-5 sm:mt-0">
-            <span className="text-slate-50 text-lg sm:text-2xl border-solid border-4 border-blue-400 p-2 sm:p-4 rounded-lg font-mono font-thin">
+            <span className="text-slate-50 text-lg sm:text-2xl z-0 border-solid border-4 border-blue-400 p-2 sm:p-4 rounded-lg font-mono font-thin">
               Like what you see?
             </span>
           </div>

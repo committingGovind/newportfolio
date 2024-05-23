@@ -26,23 +26,5 @@ export const workstack = atom({
         "Agile Framework",
       ],
     },
-    {
-      name: "Freelancing",
-      duration: "Nov '23 - Feb '24",
-      title: "Software Engineer [Contractual]",
-      location: "Remote - US Based",
-      works: [
-        "Frontend: Developed multiple web pages for an existing website thereby extending its existing functionality and usability. Did migration from react hooks to recoil atoms for most use cases.",
-        "Backend: Implemented CRUD operations for the extended website allowing users to sign-up for newsletters and owner pushed posts.",
-      ],
-      techstack: [
-        "ReactJS",
-        "JavaScript",
-        "Node.js",
-        "MongoDB",
-        "Prisma",
-        "Tailwind CSS",
-      ],
-    },
   ],
 });
